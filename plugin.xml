@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-slm-apple-wallet"
+        version="0.1.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0">
+
+  <name>SLMAppleWallet</name>
+  <description>Apple Wallet In-App Provisioning bridge (PassKit) - Monaca/Cordova friendly</description>
+  <license>MIT</license>
+
+  <js-module src="www/SLMAppleWallet.js" name="SLMAppleWallet">
+    <clobbers target="cordova.plugins.SLMAppleWallet" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="SLMAppleWallet">
+        <param name="ios-package" value="SLMAppleWallet"/>
+      </feature>
+
+      <!-- Cordova iOS needs Swift version hint sometimes -->
+      <preference name="SwiftVersion" value="5.0" />
+    </config-file>
+
+    <source-file src="src/ios/SLMAppleWallet.swift"/>
+
+    <framework src="PassKit.framework" weak="true"/>
+  </platform>
+</plugin>

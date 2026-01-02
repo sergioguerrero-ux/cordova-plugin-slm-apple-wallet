@@ -1,0 +1,11 @@
+{
+  "name": "cordova-plugin-slm-apple-wallet",
+  "version": "0.1.0",
+  "description": "Apple Wallet In-App Provisioning bridge (PassKit) - Monaca/Cordova friendly",
+  "cordova": {
+    "id": "cordova-plugin-slm-apple-wallet",
+    "platforms": ["ios"]
+  },
+  "keywords": ["cordova", "ios", "passkit", "applepay", "wallet", "monaca"],
+  "license": "MIT"
+}
